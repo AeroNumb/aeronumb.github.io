@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSepter</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-button {
+            display: none !important;
+        }
+
+        @media (max-width: 800px) {
+            .hideOnMobile {
+                display: none !important;
+            }
+            .menu-button {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/AeroSepterLogoWhite.png" class="logo">
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="socials.html">Socials</a></li>
+                    <li><a href="submit.html">Submit</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="others.html">Others</a></li>
+                </ul>
+                <ul>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="socials.html">Socials</a></li>
+                    <li class="hideOnMobile"class="hideOnMobile"><a href="submit.html">Submit</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="others.html">Others</a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>SUBMISSIONS CURRENTLY CLOSED! :(</h1>
+            <p>Currently we don't even have the record label at the first place. But submissions are expected to open in October of 2028. </p>
+        </div>
+    </div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
